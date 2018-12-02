@@ -1,0 +1,23 @@
+<div class="sampleContainer">
+  <div class="sample" style="min-width:400px;">
+    <div class="sampleText" style="line-height: 30px;">
+    <h1>Upload</h1>
+    {{#if message}}
+      <div class="error">
+        {{ message }}
+      </div>
+    {{/if}}
+    <p>All text fields are required</p>
+    <p>Image should be .jpeg or .gif</p>
+    <p>Sample should be .mp3 or .wav</p>
+    <form action='/upload' method="POST" enctype="multipart/form-data">
+      Sample name: <input type='text' name='name' required><br>
+      Instruments: <input type='text' name='instruments' required><br>
+      Image: <input type='file' name='images' required><br>
+      Sample: <input type='file' name='sounds' required><br>
+      Description: <input type='textarea' name='description' required><br>
+      <input type='submit' value='submit'><br>
+    </form>
+    </div>
+  </div>
+</div>

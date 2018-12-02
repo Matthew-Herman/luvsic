@@ -1,0 +1,32 @@
+{{#if message}}
+  <div class="error">
+    {{ message }}
+  </div>
+{{/if}}
+<div id="samplesContainer2" class="sampleContainer">
+  <soundplayer
+  ref="player"
+  v-bind:soundurl="soundurl"
+  v-bind:currname="currname"
+  >
+  </soundplayer>
+  <search v-on:searchclick="search">
+  </search>
+  <div class="sampleRow">
+    <sample
+      v-for="sample in samplesJson"
+      v-bind:key="sample.id"
+      v-bind:user="sample.user"
+      v-bind:name="sample.name"
+      v-bind:instruments="sample.instruments"
+      v-bind:description="sample.description"
+      v-bind:imageid="sample.imageid"
+      v-bind:soundid="sample.soundid"
+      v-bind:date-uploaded="sample.dateUploaded"
+      v-bind:numdownloads="sample.numdownloads"
+      v-bind:username="username"
+      v-on:play="play"
+    >
+    </sample>
+  </div>
+</div>

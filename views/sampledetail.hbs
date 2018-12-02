@@ -1,0 +1,30 @@
+<div class="sampleContainer">
+  <div class="sample">
+    <div class="sampleImageContainer">
+      <img src="../img/{{imageid}}">
+    </div>
+    <div class="sampleText" style="line-height: 30px;">
+      {{#if message}}
+        <div class="error">
+          {{ message }}
+        </div>
+      {{/if}}
+
+      <p>User: {{user}}</p>
+      <p>Date uploaded: {{dateUploaded}}</p>
+      <p><a href="/samples/{{{soundid}}}">Download link</a></p>
+      <p>Number of downloads: {{numdownloads}}</p>
+      <form action='/modify?sample={{{query}}}' method="POST" enctype="multipart/form-data">
+        Sample name: <input type='text' name='name' value="{{{name}}}"><br>
+        Instruments: <input type='text' name='instruments' value="{{{instruments}}}"><br>
+        Image: <input type='file' name='images'><br>
+        Sample: <input type='file' name='sounds'><br>
+        Description: <input type='textarea' name='description' value="{{{description}}}"/><br>
+        <div style="margin: 20px, 0px, 20px, 0px; padding: 0; text-align: center;">
+          <input type='submit' value='Save changes' name='save'>
+          <input type='submit' value='Delete sample' name='delete'><br>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+node_modules
+config.json
+public/img/*
+!public/img/.gitkeep
+public/samples/*
+!public/samples/.gitkeep

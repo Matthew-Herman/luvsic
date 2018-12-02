@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvsic Samples</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="js/vue.js"></script>
+    <script src="js/components.js"></script>
+  </head>
+  <body>
+
+    <div class="navContainer">
+      <h1>Luvsic Samples</h1>
+      <div class="navLinks">
+        <p><a href="/">Home</a></p>
+        <p><a href="/upload">Upload</a></p>
+        <p><a href="/login">Login</a></p>
+        <p><a href="/register">Register</a></p>
+      </div>
+    </div>
+    <div class="navStatus">
+    {{#if username}}
+      <p>Logged in as: {{username}}</p>
+      <p><a href="/logout">Log out</a></p>
+      {{else}}
+      <p>Not logged in</p>
+    {{/if}}
+    </div>
+
+    {{{body}}}
+
+  </body>
+  <script src="js/frontend.js"></script>
+
+
+</html>
