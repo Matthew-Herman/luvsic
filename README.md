@@ -3,6 +3,8 @@ A site for sharing samples
 
 # Run Instructions
 
+### Clone repo
+
 ```sh
 git clone https://github.com/Matthew-Herman/luvsic.git
 ```
