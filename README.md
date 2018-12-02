@@ -7,11 +7,11 @@ A site for sharing samples
 git clone https://github.com/Matthew-Herman/luvsic.git
 ```
 
-## Setup local db
+### Setup local db
 
 The default npm start expects you to configure a local mongoose&mongoDB connection in luvsic/db.js.
 
-## Setup production db
+### Setup production db
 The production run requires the existence of a file "config.json".
 
 You should create a local config.json which contains the address+credentials for the production db.
